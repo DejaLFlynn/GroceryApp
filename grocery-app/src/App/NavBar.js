@@ -1,11 +1,17 @@
 import React from "react";
-import { Navlink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+
 const NavBar = () => {
+
+    return(
+
   <>
-    <Navlink exact to={"/"}>
-      <Navlink to={"/cart"}>Cart</Navlink>
-    </Navlink>
-  </>;
+    <NavLink exact to={"/"}/>
+    <NavLink to={"/cart"}>Cart</NavLink>
+    
+  </>
+    )
 };
 
 export default NavBar;
