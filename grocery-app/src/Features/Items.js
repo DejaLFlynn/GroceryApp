@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { clearItems } from "./ItemSlice";
+import { buyItems } from "./ItemSlice";
 import { useDispatch } from "react-redux";
 const Cart = () => {
   const [itemName, setItemName] = useState("");
@@ -8,7 +8,7 @@ const Cart = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(
-      clearItems({
+      buyItems({
         itemName,
       })
     );
@@ -20,7 +20,13 @@ const Cart = () => {
       <form onSubmit={handleSubmit}>
     
       </form>
-       
+
+      Click on a button to add to cart!
+      <button>Toilet Paper</button>
+        <button>Sanitizer</button>
+        <button>Soap</button>
+        <button>Water</button>
+        <button>Lysol</button>
     </div>
   );
 };

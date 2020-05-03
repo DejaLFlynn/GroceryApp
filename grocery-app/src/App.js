@@ -3,6 +3,8 @@ import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import NavBar from "./App/NavBar";
 import Cart from './Features/Cart'
+import Items from './Features/Items'
+import Home from './Features/Home'
 function App() {
   return (
     <div className="App">
@@ -10,11 +12,13 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path={"/"}>
-          Home
+          <Home/>
+        </Route>
+        <Route exact path={"/items"}>
+          <Items/>
         </Route>
         <Route exact path={"/cart"}>
           <Cart/>
-
         </Route>
         <Route path="*" component={Error} />
       </Switch>

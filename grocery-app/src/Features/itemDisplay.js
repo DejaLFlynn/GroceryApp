@@ -4,6 +4,7 @@ import {useSelector} from 'react-redux'
 
 const ItemDisplay =()=>{
 const cartItems = useSelector((state)=>{
+    debugger
     return Object.values(state.items)
 })
 return (

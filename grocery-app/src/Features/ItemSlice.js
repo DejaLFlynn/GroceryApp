@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
+let id;
 export const ItemSlice = createSlice({
   name: "items",
   initialState: {
@@ -23,5 +23,5 @@ export const ItemSlice = createSlice({
     },
   },
 });
-export const { buyItems, clearItem } = ItemSlice.actions;
+export const { buyItems, clearItems } = ItemSlice.actions;
 export default ItemSlice.reducer;
