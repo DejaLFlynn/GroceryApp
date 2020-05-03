@@ -1,11 +1,11 @@
-import {configureStore, getDefaultMiddleware} from "@reduxjs/toolkit";
-import logger from 'react-redux';
-import items from '../Features/ItemSlice'
+import { configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 
-const reducer ={
-    items,
-}
+import items from "../Features/ItemSlice";
+
+const reducer = {
+  items,
+};
 
 export default configureStore({
-    reducer,
-})
+  reducer,
+});
