@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { buyItems } from "./ItemSlice";
 import { useDispatch } from "react-redux";
+import {useHistory} from 'react-router-dom'
 const Cart = () => {
   const [itemName, setItemName] = useState("");
   const dispatch = useDispatch();
+  let history = useHistory()
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,6 +16,13 @@ const Cart = () => {
     );
     setItemName("");
   };
+const addToCart=(event)=>{
+event.preventDefault()
+history.pushState({
+    pathname: `/cart${event.target.value}`,
+    state:{url: event.target.id}
+})
+}
 
   return (
     <div>
@@ -27,6 +36,7 @@ const Cart = () => {
         <button>Soap</button>
         <button>Water</button>
         <button>Lysol</button>
+        <button>Add To Cart</button>
     </div>
   );
 };
