@@ -4,6 +4,7 @@ const Home = ()=>{
     return(
         <div>
             Welcome to My Grocery Store
+            Click on Item page to view inventory!
         </div>
     )
 }

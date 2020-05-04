@@ -3,6 +3,7 @@ import { clearItems } from "./ItemSlice";
 import { useDispatch } from "react-redux";
 const Cart = () => {
   const [itemName, setItemName] = useState("");
+  
   const dispatch = useDispatch();
 
   const handleSubmit = (e) => {
