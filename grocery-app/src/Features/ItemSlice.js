@@ -10,16 +10,12 @@ export const ItemSlice = createSlice({
     5: { id: 5, name: "water", quantity: 6 },
   },
   reducers: {
-    buyItems: {
-      reducer: (state, action) => {
-        state[action.payload.id] = action.payload;
-      },
-      prepare: (item) => {
-        return { payload: { id: id++, ...item, quantity: -1 } };
-      },
+    buyItems: state =>{
+        state.quantity +=1;
+   
     },
     clearItem: (state) => {
-      state.payload.quantity = state.payload.quantity - 1;
+      state.quantity -=1
     },
   },
 });

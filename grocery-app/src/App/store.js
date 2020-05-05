@@ -1,15 +1,15 @@
 import React from 'react'
 import {configureStore, getDefaultMiddleware} from "@reduxjs/toolkit";
 import logger from 'react-redux';
-// import ReactDOM from 'react-dom'
-// import {Provider} from 'react-redux'
-// import {createStore} from 'redux'
+
 import items from '../Features/ItemSlice'
 
 const reducer ={
-    items,
+    items
 }
 
-export default configureStore({
+const store =configureStore({
     reducer,
 })
+
+export default store;
