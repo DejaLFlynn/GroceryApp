@@ -10,12 +10,16 @@ export const ItemSlice = createSlice({
     5: { id: 5, name: "water", quantity: 6 },
   },
   reducers: {
-    buyItems: state =>{
-        state.quantity +=1;
+    buyItem: state =>{
+        state
+        //send id with payload 
+        //inventory slice with extra reducers
+        //create a cart slice 
+        //add price
    
     },
     clearItem: (state) => {
-      state.quantity -=1
+      state.payload.quantity = state.payload.quantity - 1;
     },
   },
 });
