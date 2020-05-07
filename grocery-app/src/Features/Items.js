@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { buyItems } from "./ItemSlice";
+import { addToCart } from "./InventorySlice";
 import { useDispatch } from "react-redux";
 import { useHistory } from "react-router-dom";
 const Cart = () => {
@@ -11,7 +11,7 @@ const Cart = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(
-      buyItems({
+      addToCart({
         itemName,
       })
     );

@@ -13,7 +13,7 @@ export const ItemSlice = createSlice({
   reducers: {
     addItem: (state,{payload}) => {state.push(payload)},
     
-    removeItem: (state) => {state.pop(payload)},
+    removeItem: (state,{payload}) => {state.pop(payload)},
     extraReducers:{
         [addToCart]: state => { state.push("cartItem")}
     }
